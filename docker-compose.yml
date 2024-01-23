@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  mongo:
+    container_name: "pesaly"
+    image: mongo:5.0.8-focal
+    restart: always
+    ports:
+      - 4000:4000
+    volumes:
+      - ./db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: aminofab
+      MONGO_INITDB_ROOT_PASSWORD: 26426336
